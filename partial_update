@@ -1,0 +1,8 @@
+POST /index/member/{id}/_update
+{
+    "doc" : {
+        "updated_at" : "2014-11-27T13:17:22+0000"
+    }
+}
+
+# Partial update on updated_at in a member document
