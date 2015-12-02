@@ -1,0 +1,34 @@
+GET restored_members/member/_search
+{
+   "post_filter": {
+         "and": [
+                  {
+                              "term": {
+                                             "list_id": 457
+                                                         }
+                                                                  },
+                                                                           {
+                                                                                       "term": {
+                                                                                                      "status.status": [
+                                                                                                                        "removed"
+                                                                                                                                       ]
+                                                                                                                                                   }
+                                                                                                                                                            },
+                                                                                                                                                                                  {
+                                                                                                                                                                                                    "range": {
+                                                                                                                                                                                                                         "updated_at": {
+                                                                                                                                                                                                                                                 "gte": "2015-10-05T00:00:00+0000",
+                                                                                                                                                                                                                                                                         "lte": "2015-12-02T00:00:00+0000"
+                                                                                                                                                                                                                                                                                              }
+                                                                                                                                                                                                                                                                                                                }
+                                                                                                                                                                                                                                                                                                                               }
+                                                                                                                                                                                                                                                                                                                                           ]
+                                                                                                                                                                                                                                                                                                                                              },
+                                                                                                                                                                                                                                                                                                                                                 "size": 300,
+                                                                                                                                                                                                                                                                                                                                                    "fields": [
+                                                                                                                                                                                                                                                                                                                                                          "fields.email"
+                                                                                                                                                                                                                                                                                                                                                             ], 
+                                                                                                                                                                                                                                                                                                                                                                "query": {
+                                                                                                                                                                                                                                                                                                                                                                      "match_all": {}
+                                                                                                                                                                                                                                                                                                                                                                         }
+                                                                                                                                                                                                                                                                                                                                                                         }
